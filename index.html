@@ -1,1 +1,155 @@
-Stoic Internet
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>STOIC Internet — Fibra Óptica em Brasília</title>
+<meta name="description" content="STOIC Internet — Provedor de internet fibra óptica em Brasília, DF. Planos a partir de R$ 89,99."/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:Arial,sans-serif;background:#0D0820;color:#fff;}
+nav{background:#0D0820;border-bottom:1px solid rgba(0,180,255,0.2);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:64px;position:fixed;top:0;left:0;right:0;z-index:100;}
+.logo{font-size:20px;font-weight:900;color:#fff;letter-spacing:2px;text-decoration:none;}
+.logo span{color:#00B4FF;}
+nav a.cta{background:#00B4FF;color:#000;padding:10px 22px;border-radius:6px;text-decoration:none;font-size:13px;font-weight:700;}
+.hero{min-height:100vh;background:linear-gradient(160deg,#0D0820 0%,#1a0a3a 50%,#0D0820 100%);display:flex;align-items:center;padding:100px 5% 60px;}
+.hero-content{max-width:600px;}
+.hero-badge{display:inline-block;border:1px solid #00B4FF;color:#00B4FF;padding:5px 14px;border-radius:4px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;}
+.hero h1{font-size:clamp(40px,6vw,72px);font-weight:900;line-height:1;text-transform:uppercase;margin-bottom:8px;}
+.hero h1 em{font-style:normal;color:#00B4FF;display:block;}
+.slogan{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#8A96A8;margin-bottom:20px;}
+.hero p{font-size:16px;line-height:1.7;color:rgba(255,255,255,0.65);margin-bottom:36px;}
+.btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-p{background:#00B4FF;color:#000;padding:14px 30px;border-radius:6px;text-decoration:none;font-weight:700;font-size:14px;text-transform:uppercase;}
+.btn-s{border:1px solid rgba(255,255,255,0.3);color:#fff;padding:14px 30px;border-radius:6px;text-decoration:none;font-weight:600;font-size:14px;text-transform:uppercase;}
+.stats{background:rgba(0,180,255,0.06);border-top:1px solid rgba(0,180,255,0.15);border-bottom:1px solid rgba(0,180,255,0.15);padding:48px 5%;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:24px;}
+.stat{text-align:center;}
+.stat-n{font-size:48px;font-weight:900;color:#00B4FF;line-height:1;margin-bottom:6px;}
+.stat-l{font-size:11px;color:#8A96A8;letter-spacing:2px;text-transform:uppercase;}
+section{padding:72px 5%;}
+.tag{display:inline-block;color:#00B4FF;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;border-bottom:2px solid #00B4FF;padding-bottom:6px;}
+h2{font-size:clamp(28px,4vw,48px);font-weight:900;text-transform:uppercase;margin-bottom:40px;line-height:1;}
+.planos{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;}
+.plano{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:28px 22px;}
+.plano.d{border-color:#00B4FF;background:rgba(0,180,255,0.08);}
+.vel{font-size:56px;font-weight:900;color:#00B4FF;line-height:1;}
+.vel small{font-size:20px;font-weight:400;color:#8A96A8;}
+.preco{font-size:32px;font-weight:800;color:#fff;margin:12px 0;}
+.preco small{font-size:13px;font-weight:400;color:#8A96A8;}
+.items{list-style:none;margin:14px 0 22px;display:flex;flex-direction:column;gap:8px;}
+.items li{font-size:13px;color:rgba(255,255,255,0.75);display:flex;align-items:center;gap:8px;}
+.items li::before{content:'✓';color:#00B4FF;font-weight:700;}
+.btn-pl{display:block;text-align:center;background:#00B4FF;color:#000;padding:12px;border-radius:6px;text-decoration:none;font-size:13px;font-weight:700;text-transform:uppercase;}
+.nota{margin-top:16px;font-size:12px;color:#8A96A8;font-style:italic;}
+.dif-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;}
+.dif{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:24px 20px;}
+.dif h3{font-size:16px;font-weight:700;text-transform:uppercase;color:#fff;margin-bottom:8px;margin-top:12px;}
+.dif p{font-size:13px;line-height:1.6;color:#8A96A8;}
+.contato{background:rgba(45,27,94,0.3);border-top:1px solid rgba(0,180,255,0.15);}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
+@media(max-width:640px){.cgrid{grid-template-columns:1fr;}}
+.contato > div > p{color:rgba(255,255,255,0.65);font-size:15px;line-height:1.7;margin-bottom:28px;}
+.citems{display:flex;flex-direction:column;gap:12px;}
+.citem{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);padding:14px 18px;border-radius:10px;font-size:14px;color:rgba(255,255,255,0.85);}
+.form{display:flex;flex-direction:column;gap:12px;}
+.form input,.form textarea{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#fff;padding:13px 16px;border-radius:8px;font-size:13px;font-family:Arial,sans-serif;outline:none;resize:none;}
+.form input::placeholder,.form textarea::placeholder{color:rgba(255,255,255,0.35);}
+.form button{background:#00B4FF;color:#000;padding:14px;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;text-transform:uppercase;}
+footer{background:rgba(0,0,0,0.5);border-top:1px solid rgba(255,255,255,0.06);padding:24px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+footer p,footer a{font-size:12px;color:rgba(255,255,255,0.35);text-decoration:none;}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#" class="logo">STOIC <span>Internet</span></a>
+  <a href="#contato" class="cta">Contratar agora</a>
+</nav>
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Brasília, DF</div>
+    <h1>Internet<em>Fibra Óptica</em></h1>
+    <p class="slogan">Conectando você ao que importa</p>
+    <p>Velocidade real, estabilidade total e suporte dedicado. Planos de fibra óptica para sua casa ou empresa em Brasília.</p>
+    <div class="btns">
+      <a href="#planos" class="btn-p">Ver planos</a>
+      <a href="https://wa.me/5561993613722" class="btn-s">WhatsApp</a>
+    </div>
+  </div>
+</section>
+<div class="stats">
+  <div class="stat"><div class="stat-n">100%</div><div class="stat-l">Fibra Óptica</div></div>
+  <div class="stat"><div class="stat-n">24h</div><div class="stat-l">Suporte disponível</div></div>
+  <div class="stat"><div class="stat-n">99%</div><div class="stat-l">Uptime garantido</div></div>
+  <div class="stat"><div class="stat-n">0</div><div class="stat-l">Franquia de dados</div></div>
+</div>
+<section id="planos">
+  <div class="tag">Planos</div>
+  <h2>Escolha sua velocidade</h2>
+  <div class="planos">
+    <div class="plano">
+      <div class="vel">300<small>MB</small></div>
+      <div class="preco">R$ 89<small>,99/mês</small></div>
+      <ul class="items"><li>Wi-Fi incluído</li><li>Internet ilimitada</li><li>Suporte via WhatsApp</li><li>Instalação gratuita</li></ul>
+      <a href="#contato" class="btn-pl">Contratar</a>
+    </div>
+    <div class="plano d">
+      <div class="vel">700<small>MB</small></div>
+      <div class="preco">R$ 99<small>,99/mês</small></div>
+      <ul class="items"><li>Wi-Fi incluído</li><li>Internet ilimitada</li><li>Suporte prioritário 24h</li><li>Instalação gratuita</li><li>IP fixo disponível</li></ul>
+      <a href="#contato" class="btn-pl">Contratar</a>
+    </div>
+    <div class="plano">
+      <div class="vel">800<small>MB</small></div>
+      <div class="preco">R$ 129<small>,99/mês</small></div>
+      <ul class="items"><li>Wi-Fi incluído</li><li>Internet ilimitada</li><li>Suporte prioritário 24h</li><li>Instalação gratuita</li><li>IP fixo incluído</li></ul>
+      <a href="#contato" class="btn-pl">Contratar</a>
+    </div>
+    <div class="plano">
+      <div class="vel">900<small>MB</small></div>
+      <div class="preco">R$ 139<small>,99/mês</small></div>
+      <ul class="items"><li>2 roteadores Mesh</li><li>Internet ilimitada</li><li>Suporte prioritário 24h</li><li>Instalação gratuita</li><li>IP fixo incluído</li></ul>
+      <a href="#contato" class="btn-pl">Contratar</a>
+    </div>
+  </div>
+  <p class="nota">* Planos com desconto de pontualidade. Consulte disponibilidade na sua região.</p>
+</section>
+<section style="background:rgba(255,255,255,0.02);">
+  <div class="tag">Por que a STOIC</div>
+  <h2>Ultra velocidade. Estabilidade total.</h2>
+  <div class="dif-grid">
+    <div class="dif"><div>⚡</div><h3>Ultra velocidade</h3><p>Fibra óptica simétrica com velocidade real de download e upload.</p></div>
+    <div class="dif"><div>🛡️</div><h3>Estabilidade total</h3><p>Rede monitorada 24h com infraestrutura redundante.</p></div>
+    <div class="dif"><div>🎧</div><h3>Suporte dedicado</h3><p>Atendimento direto via WhatsApp com técnicos especializados.</p></div>
+    <div class="dif"><div>📡</div><h3>Wi-Fi incluído</h3><p>Roteador de qualidade incluso em todos os planos.</p></div>
+  </div>
+</section>
+<section class="contato" id="contato">
+  <div>
+    <div class="tag">Contato</div>
+    <h2>Fale com a STOIC Internet</h2>
+    <div class="cgrid">
+      <div>
+        <p>Atendemos em Brasília, DF. Entre em contato para verificar disponibilidade na sua região.</p>
+        <div class="citems">
+          <div class="citem">📱 (61) 9961-3722</div>
+          <div class="citem">✉️ stoicinternet@gmail.com</div>
+          <div class="citem">📍 Brasília, DF</div>
+          <div class="citem">🕐 Atendimento 24 horas</div>
+        </div>
+      </div>
+      <div class="form">
+        <input type="text" placeholder="Seu nome"/>
+        <input type="tel" placeholder="WhatsApp"/>
+        <input type="text" placeholder="Bairro / Região"/>
+        <textarea rows="4" placeholder="Como podemos ajudar?"></textarea>
+        <button type="button">Enviar mensagem</button>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <p>© 2026 STOIC Internet — Brasília, DF</p>
+  <p><a href="#">Política de Privacidade</a></p>
+</footer>
+</body>
+</html>
